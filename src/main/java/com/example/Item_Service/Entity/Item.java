@@ -1,15 +1,15 @@
 package com.example.Item_Service.Entity;
 
-import jakarta.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.*;
 
-@Entity
+@Document
 @Getter
 @Setter
 public class Item {
     @Id
-    @GeneratedValue
-    private Long id;
+    private String id;
 
     private String name;
     private String description;

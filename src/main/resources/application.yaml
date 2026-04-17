@@ -1,7 +1,14 @@
 spring:
   application:
     name: Item-Service
+  mongodb:
+    database: itemdb
+    host: localhost
+    port: 27017
+
+eureka:
+  client:
+    enabled: false
 
 server:
   port: 8081
-

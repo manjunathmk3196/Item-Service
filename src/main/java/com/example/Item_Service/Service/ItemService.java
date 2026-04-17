@@ -26,7 +26,7 @@ public class ItemService {
         return repository.save(item);
     }
 
-    public Item update(Long id, Item request) {
+    public Item update(String id, Item request) {
         Item existing = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Item not found: " + id));
 
@@ -37,7 +37,7 @@ public class ItemService {
         return repository.save(existing);
     }
 
-    public void delete(Long id) {
+    public void delete(String id) {
         repository.deleteById(id);
     }
 }
