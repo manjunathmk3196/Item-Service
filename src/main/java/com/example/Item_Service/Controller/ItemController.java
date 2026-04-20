@@ -74,13 +74,5 @@ public class ItemController {
         service.delete(id);
     }
 
-    @GetMapping("/ping")
-    @Operation(summary = "Service info", description = "Get information about available endpoints")
-    @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Service information retrieved successfully")
-    })
-    public String home() {
-        return "Service is running!";
-    }
 
 }
